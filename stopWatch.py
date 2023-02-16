@@ -23,6 +23,7 @@ def Start(label):
 	running=True
 	counter_label(label)
 	start['state']='disabled'
+	start['text']="resume"
 	stop['state']='normal'
 	reset['state']='normal'
 def Stop():
@@ -37,8 +38,10 @@ def Reset(label):
 	if running==False:	
 		reset['state']='disabled'
 		label['text']='Welcome!'
+		start['text']='start'
 	else:			
 		label['text']='Starting...'
+		start['text']='start'
 
 root = Tkinter.Tk()
 root.title("Stopwatch")
